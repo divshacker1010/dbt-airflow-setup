@@ -1,0 +1,10 @@
+version: '3'
+services:
+  air_dbt:
+    image: air_dbt:v1
+    volumes:
+      - ./airflow:/opt/airflow
+      - ~/.dbt:/home/airflow/.dbt # cause profiles.yaml is expected to be at location /home/airflow/.dbt' 
+    ports:
+      - "8080:8080"
+    command: airflow standalone
