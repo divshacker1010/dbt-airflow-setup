@@ -3,6 +3,8 @@
 
 Now Postgres pod should be up and running
 
+** Good video to understand dbt : https://www.youtube.com/watch?v=M8oi7nSaWps **  
+
 1. Clone this repo
 2. Do `docker inspect <postgres_container_name/id>` , get the `gateway` and replace the `host` already present as `172.17.0.1` with your gateway ip in data_ingesion.py file. 
 3. Build the docker file : `docker build . -t air_dbt:v1`
