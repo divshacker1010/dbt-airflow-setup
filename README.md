@@ -8,8 +8,8 @@ Now Postgres pod should be up and running
 3. Build the docker file : `docker build . -t air_dbt:v1`
 4. Followed by : `docker compose up -d`
 
-5. To run airflow in terminal : 
-  a. Exec into the airflow container : `docker exec -it airflow-air_dbt-1 /bin/sh`
+5. To run airflow in terminal :  
+  a. Exec into the airflow container : `docker exec -it airflow-air_dbt-1 /bin/sh`  
   b. To list existing dags : `airflow dags list`
   c. To run the data_ingesion dag run : `airflow tasks test csv_to_postgres_dag load_csv_to_postgres 2024-01-01`
   d. To run the dbt_dag dag run : `airflow tasks test dbt_pipeline dbt_run 2024-01-01`
